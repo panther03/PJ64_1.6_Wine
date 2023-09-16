@@ -74,18 +74,15 @@ You don't have to `make install` either, you can just leave it there - if you ha
 
 If you didn't do `make install` for `hidapi` earlier, modify line 13 of the Makefile in the `pj64raphnet_wine/src/` directory of this repo to include the directory where `hidapi.h` from earlier can be found. Similar for the Makefile in `pj64raphnet_wine/hidapi_wineproxy` - change lines 23 and 26 for the include and library directories containing the appropriate hidapi files, again if you have not already installed them to system directories.
 
-Now, in theory, you just run `make` in the `pj64raphnetraw_wine` directory of this repo. The two dlls will be in the `out/` directory inside `pj64raphnetraw_wine`. If something breaks, you can either a) cry or b) just go back to Mupen.
+Now, in theory, you just run `make` in the `pj64raphnetraw_wine` directory of this repo. The two dlls will be in the `out/` directory inside `pj64raphnetraw_wine`. If something breaks, you can either a) spend some hours googling, b) go back to mupen or c) cry.
 
 ## Installing 
 
 Put `pj64raphnetraw.dll` in your Project64 Plugins folder like you would any other. Put `hidapi_wineproxy.dll` in the same folder as Project64.exe. Note that it ends in `dll` but it is actually by all means a Unix shared library, only usable with Wine. You will also need to put `libhidapi-hidraw.so` (all versions with the symlinks, so `libhidapi-hidraw.so`        `libhidapi-hidraw.so.0`, `libhidapi-hidraw.so.0.0.0`) in a directory that Wine searches in. This will depend on what version of Proton you selected for the game, but if you're running say 8.0, Steam stores its lib directory in:
 `~/.steam/steam/steamapps/common/Proton\ 8.0/dist/lib/`. I found it easiest to just put the shared libraries here, but there is probably an environment variable you can just set to make it work for somewhere else.
 
-Now you can just click launch on the game, and you should not get any warnings from raphnetraw saying it could not initalize the plugin, if everything is working fine. Head to `Options -> Configure Controller Plugin`` to check.
+Now you can just click launch on the game, and you should not get any warnings from raphnetraw saying it could not initalize the plugin, if everything is working fine. Head to `Options -> Configure Controller Plugin` to check.
 
 ## Debugging
 
 [DEBUGGING.md](debugging.md) contains a dump of some info about debugging or getting logs about what it happening if you do decide to troubleshoot this.
-
-
-TODO: add shit about debugging
