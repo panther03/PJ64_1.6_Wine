@@ -1,7 +1,8 @@
 * To have Steam create a log when you launch the game: add `PROTON_LOG=1` to launch options in game
 
 * To launch the game from the command line (you have to be in the game's compatdata folder, which is in `steamapps/compatdata/<the-game-id>/`)
-```WINEPREFIX="$(pwd)/pfx/" "~/.local/share/Steam/steamapps/common/Proton 8.0/dist/bin/wine" /path/to/Project64.exe 2>&1
+```
+WINEPREFIX="$(pwd)/pfx/" "~/.local/share/Steam/steamapps/common/Proton 8.0/dist/bin/wine" /path/to/Project64.exe 2>&1
 ```
 
 * Useful Wine options:
